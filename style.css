@@ -22,16 +22,21 @@
 
 header {
     height: 100%;
+    font-family: 'Lobster', cursive;
+    color: yellow;
 }
+
 
 .drawing-area {
     display: grid;
     height: 100%;
-    padding: 200px 225px;
+    padding: 225px 250px;
     background-color: gainsboro;
     border-radius: 5px;
 }
 
 footer {
     margin:25px 0;
+    color: yellow;
+    font-family: 'Lobster', cursive;
 }
