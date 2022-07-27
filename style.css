@@ -1,9 +1,13 @@
 .vertical-container {
     display:flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: space-around;
     align-items: center;
     min-height: 100vh;
+}
+
+body {
+    background: #26F3DF;
 }
 
 .sketch-container {
@@ -11,14 +15,29 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    color: black;
     background-color: red;
     border-style: none solid none solid;
     border-image: linear-gradient(to right, #8b0000, red, #8b0000);
-    /* border-color: none #ff5e5b none #ff5e5b; */
+    border-color: none red none red;
     border-width: 0 60px 5px 60px;
     border-radius: 15px;
 }  
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    grid-template-rows: repeat(4,25%);
+}
+
+.drawing-area {
+background: gainsboro;
+}
+
+.grid-container div {
+    border: 1px solid gray;
+    min-width: 50px;
+    min-height: 50px;
+}
 
 header {
     height: 100%;
@@ -27,16 +46,15 @@ header {
 }
 
 
-.drawing-area {
-    display: grid;
-    height: 100%;
-    padding: 225px 250px;
-    background-color: gainsboro;
-    border-radius: 5px;
-}
 
 footer {
     margin:25px 0;
     color: yellow;
     font-family: 'Lobster', cursive;
+}
+
+
+
+.grid-colored-black {
+    background: black;
 }
