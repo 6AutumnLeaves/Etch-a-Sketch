@@ -1,8 +1,11 @@
-
-
 const grid = document.querySelector(".grid-container");
-let gridLayout = '';
-// chooseCorrectNumber();
+
+
+
+
+
+let gridLayout;
+
 const clearGrid = () => {
     gridSquares = document.querySelectorAll(".grid-item");
    
@@ -14,9 +17,8 @@ const clearGrid = () => {
 
 
 const drawGrids = (gridLayout) => {
-// checkCorrectNumber();
+
 gridLayout = document.getElementById("grid-sizing").value;
-clearGrid();
 grid.style.setProperty('--grid-rows', gridLayout);
 grid.style.setProperty('--grid-columns', gridLayout);
 for (i = 0; i < gridLayout * gridLayout; i++) {
@@ -32,10 +34,18 @@ console.log(gridLayout);
 
 
 
-const checkCorrectNumber = () => {
-    let prompt = '';
-    if (gridLayout < 1 || gridLayout > 64) {
-        prompt = `You typed ${gridLayout}. Must be number from 1 to 64`;
+const getSize = () => {
+    let prompt;
+    let newGrid = document.getElementById("grid-sizing").value;
+    let desiredValue = parseInt(newGrid);
+
+    if (desiredValue >= 1 && desiredValue <= 64) {
+        gridLayout = newGrid;
+        
+        clearGrid();
+        drawGrids();
+    }else{
+        prompt = `You typed ${newGrid}. Must be number from 1 to 64`;
         alert(prompt);
     }
 }
