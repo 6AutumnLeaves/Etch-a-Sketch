@@ -8,29 +8,20 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lobster&amp;family=Montserrat:wght@400;700&amp;display=swap">
     </head>
     <body class="vertical-container">
-        <div class ='grid-size-controls'>Pick the grid</div>
+        
+        <div class ='grid-size-controls'>
+            <p class="grid-text">Pick Grid Size from 
+                <br><span style = 'color: yellow;'>1-64</span></p>
+            <input class = "grid-input-bar" value="16" type="text" id ='grid-sizing'>
+            <input type="submit" id = "submit-grid" onclick="drawGrids()">
+        </div>
+        
         <div class = 'sketch-container'>
             <header>
                 <h1>Etch-A-Sketch</h1>
             </header>
             <main>
                 <div class ='drawing-area grid-container'>
-                    <div class = 'grid-item'></div>
-                    <div class = 'grid-item'></div>
-                    <div class = 'grid-item'></div>
-                    <div class = 'grid-item'></div>
-                    <div class = 'grid-item'></div>
-                    <div class = 'grid-item'></div>
-                    <div class = 'grid-item'></div>
-                    <div class = 'grid-item'></div>
-                    <div class = 'grid-item'></div>
-                    <div class = 'grid-item'></div>
-                    <div class = 'grid-item'></div>
-                    <div class = 'grid-item'></div>
-                    <div class = 'grid-item'></div>
-                    <div class = 'grid-item'></div>
-                    <div class = 'grid-item'></div>
-                    <div class = 'grid-item'></div>
                 </div>
             </main>
             <footer>
@@ -38,6 +29,7 @@
                 
             </footer>
         </div>  
+       
         <div class="sketch-options">Pick your color!</div>
         <script src="script.js"></script>
     </body>

@@ -1,3 +1,4 @@
+
 .vertical-container {
     display:flex;
     flex-direction: row;
@@ -7,26 +8,66 @@
 }
 
 body {
-    background: #26F3DF;
+    background: hsl(174, 90%, 55%);
+}
+
+.grid-size-controls {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+        "t t t t t"
+        "g g g s s";
+    font-size: 1.7rem;
+    font-family: 'Lobster', cursive;
+    /* font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; */
+    color: navy;
+    max-width: 15%;
+}
+
+.grid-text {
+    grid-area: t;
+}
+
+.grid-input-bar {
+    grid-area: g;
+}
+
+.submit-grid {
+    grid-area: s;
 }
 
 .sketch-container {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    font-family: 'Lobster', cursive;
+    color: yellow;
     align-items: center;
     background-color: red;
     border-style: none solid none solid;
     border-image: linear-gradient(to right, #8b0000, red, #8b0000);
     border-color: none red none red;
-    border-width: 0 60px 5px 60px;
+    border-width: 0 70px 5px 70px;
     border-radius: 15px;
 }  
 
+.sketch-options {
+    font-family: 'Lobster', cursive;
+    font-size: 1.7rem;
+    color: navy;
+}
+
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(4, 25%);
-    grid-template-rows: repeat(4,25%);
+    --grid-cols: 16;
+    --grid-rows: 16;
+    grid-template-columns: repeat(var(--grid-cols), 1fr);
+    grid-template-rows: repeat(var(--grid-rows),1fr);
+    height: 100%;
+    width: 100%;
+    min-width: 60vh;
+    min-height: 60vh;
 }
 
 .drawing-area {
@@ -35,22 +76,17 @@ background: gainsboro;
 
 .grid-container div {
     border: 1px solid gray;
-    min-width: 50px;
-    min-height: 50px;
 }
 
 header {
     height: 100%;
-    font-family: 'Lobster', cursive;
-    color: yellow;
+    
 }
 
 
 
 footer {
     margin:25px 0;
-    color: yellow;
-    font-family: 'Lobster', cursive;
 }
 
 
@@ -58,3 +94,8 @@ footer {
 .grid-colored-black {
     background: black;
 }
+
+/* .grid-item {
+    min-width: 2px;
+    min-height: 2px;
+} */
