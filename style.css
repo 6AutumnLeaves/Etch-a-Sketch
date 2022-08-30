@@ -67,6 +67,7 @@ body {
     height: 70vmin;
     width: 70vmin;
     margin: auto;
+ 
     /* min-width: 640px;
     min-height: 640px; */
     /* max-height: 100vh;
@@ -98,8 +99,9 @@ footer {
     background: black;
 }
 
-/* .grid-item {
+.grid-item {
     min-width: 5px;
     min-height: 5px;
     box-sizing: border-box;
-} */
+    
+}

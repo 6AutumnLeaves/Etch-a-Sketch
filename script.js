@@ -20,7 +20,7 @@ const drawGrids = (gridLayout) => {
 
 gridLayout = document.getElementById("grid-sizing").value;
 grid.style.setProperty('--grid-rows', gridLayout);
-grid.style.setProperty('--grid-columns', gridLayout);
+grid.style.setProperty('--grid-cols', gridLayout);
 for (i = 0; i < gridLayout * gridLayout; i++) {
     let cell = document.createElement('div');
     cell.addEventListener('mouseover', (e) => {
@@ -49,7 +49,6 @@ const getSize = () => {
         alert(prompt);
     }
 }
-// let gridSquares = document.querySelectorAll(".grid-item");
 
 
 
