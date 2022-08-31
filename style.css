@@ -5,6 +5,7 @@
     justify-content: space-around;
     align-items: center;
     min-height: 100vh;
+
 }
 
 body {
@@ -18,11 +19,11 @@ body {
     grid-template-areas:
         "t t t t t"
         "g g g s s";
-    font-size: 1.7rem;
+    font-size: 2rem;
     font-family: 'Lobster', cursive;
-    /* font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; */
     color: navy;
     max-width: 15%;
+    justify-self: flex-start;
 }
 
 .grid-text {
@@ -52,11 +53,7 @@ body {
     border-radius: 15px;
 }  
 
-.sketch-options {
-    font-family: 'Lobster', cursive;
-    font-size: 1.7rem;
-    color: navy;
-}
+
 
 .grid-container {
     display: grid;
@@ -68,19 +65,14 @@ body {
     width: 70vmin;
     margin: auto;
  
-    /* min-width: 640px;
-    min-height: 640px; */
-    /* max-height: 100vh;
-    max-width: 100vh; */
+    
 }
 
 .drawing-area {
 background: gainsboro;
 }
 
-.grid-container div {
-    border: 1px solid gray;
-}
+
 
 header {
     height: 100%;

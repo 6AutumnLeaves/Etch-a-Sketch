@@ -39,7 +39,7 @@ const getSize = () => {
     let newGrid = document.getElementById("grid-sizing").value;
     let desiredValue = parseInt(newGrid);
 
-    if (desiredValue >= 1 && desiredValue <= 64) {
+    if (desiredValue >= 1 && desiredValue <= 100) {
         gridLayout = newGrid;
         
         clearGrid();
